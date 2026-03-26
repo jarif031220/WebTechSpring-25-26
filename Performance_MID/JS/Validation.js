@@ -10,18 +10,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
         let quantity = parseInt(quantityField.value) || 0;
 
-        // Validation
+     
         if (quantity < 0) {
             alert("Quantity cannot be less than 0");
             quantityField.value = 0;
             quantity = 0;
         }
 
-        // Calculate total price
         let totalPrice = unitPrice * quantity * days;
         totalField.value = totalPrice;
 
-        // Bonus condition
+        
         if (totalPrice > 1000) {
             alert("You are eligible for a gift coupon!");
         }
